@@ -3,3 +3,5 @@ test_argparse
 *.[ao]
 *.dylib
 *.so
+.DS_Store
+xcuserdata
