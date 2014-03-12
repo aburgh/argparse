@@ -1,8 +1,9 @@
 #include "argparse.h"
-#include <sysexits.h>
 
 #ifdef WIN32
 #define EX_USAGE        64
+#else
+#include <sysexits.h>
 #endif
 
 #define OPT_UNSET 1
