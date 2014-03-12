@@ -70,11 +70,11 @@ argparse_getvalue(struct argparse *this, const struct argparse_option *opt,
         break;
     case ARGPARSE_OPT_INTEGER:
         if (this->optvalue) {
-            *(int *)opt->value = strtol(this->optvalue, (char **)&s, 0);
+            *(int *)opt->value = (int) strtol(this->optvalue, (char **)&s, 0);
             this->optvalue = NULL;
         } else if (this->argc > 1) {
             this->argc--;
-            *(int *)opt->value = strtol(*++this->argv, (char **)&s, 0);
+            *(int *)opt->value = (int) strtol(*++this->argv, (char **)&s, 0);
         } else {
             argparse_error(this, opt, "requires a value");
         }
@@ -251,8 +251,8 @@ argparse_usage(struct argparse *this)
     const struct argparse_option *options;
 
     // figure out best width
-    size_t usage_opts_width = 0;
-    size_t len;
+    int usage_opts_width = 0;
+    int len;
     options = this->options;
     for (; options->type != ARGPARSE_OPT_END; options++) {
         len = 0;
@@ -279,7 +279,7 @@ argparse_usage(struct argparse *this)
 
     options = this->options;
     for (; options->type != ARGPARSE_OPT_END; options++) {
-        size_t pos;
+        int pos;
         int pad;
         pos = fprintf(stdout, "    ");
         if (options->short_name) {
