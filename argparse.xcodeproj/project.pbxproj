@@ -25,7 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		963989E618D08AB40003619F /* argparse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = argparse; sourceTree = BUILT_PRODUCTS_DIR; };
+		963989E618D08AB40003619F /* argparse */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = test_argparse; path = test_argparse; sourceTree = BUILT_PRODUCTS_DIR; };
 		963989F218D08AFF0003619F /* argparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = argparse.c; sourceTree = SOURCE_ROOT; };
 		963989F318D08AFF0003619F /* argparse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = argparse.h; sourceTree = SOURCE_ROOT; };
 		963989F518D08B260003619F /* test_argparse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_argparse.c; sourceTree = "<group>"; };
@@ -334,6 +334,7 @@
 				96398A0518D08BE00003619F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
